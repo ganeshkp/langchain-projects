@@ -21,7 +21,7 @@ from typing_extensions import Annotated, Literal
 from deep_agents_from_scratch.prompts import SUMMARIZE_WEB_SEARCH
 from deep_agents_from_scratch.state import DeepAgentState
 
-# Summarization model 
+# Summarization model
 summarization_model = init_chat_model(model="openai:gpt-4o-mini")
 tavily_client = TavilyClient()
 
@@ -35,10 +35,10 @@ def get_today_str() -> str:
     return datetime.now().strftime("%a %b %-d, %Y")
 
 def run_tavily_search(
-    search_query: str, 
-    max_results: int = 1, 
-    topic: Literal["general", "news", "finance"] = "general", 
-    include_raw_content: bool = True, 
+    search_query: str,
+    max_results: int = 1,
+    topic: Literal["general", "news", "finance"] = "general",
+    include_raw_content: bool = True,
 ) -> dict:
     """Perform search using Tavily API for a single query.
 
@@ -76,7 +76,7 @@ def summarize_webpage_content(webpage_content: str) -> Summary:
         # Generate summary
         summary_and_filename = structured_model.invoke([
             HumanMessage(content=SUMMARIZE_WEB_SEARCH.format(
-                webpage_content=webpage_content, 
+                webpage_content=webpage_content,
                 date=get_today_str()
             ))
         ])
@@ -107,7 +107,7 @@ def process_search_results(results: dict) -> list[dict]:
 
     for result in results.get('results', []):
 
-        # Get url 
+        # Get url
         url = result['url']
 
         # Read url with timeout and error handling
@@ -178,7 +178,7 @@ def tavily_search(
         max_results=max_results,
         topic=topic,
         include_raw_content=True,
-    ) 
+    )
 
     # Process and summarize results
     processed_results = process_search_results(search_results)

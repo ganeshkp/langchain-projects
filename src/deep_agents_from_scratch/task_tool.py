@@ -70,6 +70,7 @@ def _create_task_tool(tools, subagents: list[SubAgent], model, state_schema):
         f"- {_agent['name']}: {_agent['description']}" for _agent in subagents
     ]
 
+    # This is Delegate task to a specialized sub-agent with isolated context
     @tool(description=TASK_DESCRIPTION_PREFIX.format(other_agents=other_agents_string))
     def task(
         description: str,
