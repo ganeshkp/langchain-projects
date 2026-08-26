@@ -29,7 +29,7 @@ This is a reminder that we'll be performing scheduled maintenance on the product
 Please plan your work accordingly and ensure no critical deployments are scheduled during this window.
 
 Thanks,
-System Admin Team"""
+System Admin Team""",
 }
 
 # Dataset examples
@@ -111,7 +111,7 @@ email_input_6 = {
     "subject": "Do you want to attend this conference?",
     "email_thread": """Hi Lance,
 
-We're reaching out to invite you to TechConf 2025, happening May 15-17 in San Francisco. 
+We're reaching out to invite you to TechConf 2025, happening May 15-17 in San Francisco.
 
 The conference features keynote speakers from major tech companies, workshops on AI and ML, and great networking opportunities. Early bird registration is available until April 30th.
 
@@ -300,29 +300,29 @@ triage_output_16 = "notify"
 
 # Response criteria (when applicable)
 response_criteria_1 = """
-• Send email with write_email tool call to acknowledge the question and confirm it will be investigated  
+• Send email with write_email tool call to acknowledge the question and confirm it will be investigated
 """
 
 response_criteria_2 = """
 • No response needed
-• Ensure this is ignored  
+• Ensure this is ignored
 """
 
 response_criteria_3 = """
 • No response needed
-• Ensure the user is notified  
+• Ensure the user is notified
 """
 
 response_criteria_4 = """
-• Check calendar availability for Tuesday or Thursday afternoon next week with check_calendar_availability tool call 
+• Check calendar availability for Tuesday or Thursday afternoon next week with check_calendar_availability tool call
 • Confirm availability for a 45-minute meeting
-• Send calendar invite with schedule_meeting tool call 
-• Send email with write_email tool call to acknowledge tax planning request and notifying that a meeting has been scheduled  
+• Send calendar invite with schedule_meeting tool call
+• Send email with write_email tool call to acknowledge tax planning request and notifying that a meeting has been scheduled
 """
 
 response_criteria_5 = """
 • No response needed
-• Ensure the user is notified  
+• Ensure the user is notified
 """
 
 response_criteria_6 = """
@@ -344,22 +344,22 @@ response_criteria_8 = """
 
 response_criteria_9 = """
 • No response needed
-• Ensure the user is notified  
+• Ensure the user is notified
 """
 
 response_criteria_10 = """
-• Check calendar for 90-minute meeting availability for Monday or Wednesday with check_calendar_availability tool call 
-• Send email acknowledging the request and providing availability with write_email tool call  
+• Check calendar for 90-minute meeting availability for Monday or Wednesday with check_calendar_availability tool call
+• Send email acknowledging the request and providing availability with write_email tool call
 """
 
 response_criteria_11 = """
 • No response needed
-• Ensure the user is notified  
+• Ensure the user is notified
 """
 
 response_criteria_12 = """
 • No response needed
-• Ensure the user is notified  
+• Ensure the user is notified
 """
 
 response_criteria_13 = """
@@ -369,132 +369,196 @@ response_criteria_13 = """
 
 response_criteria_14 = """
 • No response needed
-• Ensure this is ignored  
+• Ensure this is ignored
 """
 
 response_criteria_15 = """
-• Check calendar for 60-minute meeting availability for Tuesday or Thursday with check_calendar_availability tool call 
-• Send calendar invite with schedule_meeting tool call 
-• Send email agreeing to collaborate on the joint presentation and notifying that a meeting has been scheduled with write_email tool call  
+• Check calendar for 60-minute meeting availability for Tuesday or Thursday with check_calendar_availability tool call
+• Send calendar invite with schedule_meeting tool call
+• Send email agreeing to collaborate on the joint presentation and notifying that a meeting has been scheduled with write_email tool call
 """
 
 response_criteria_16 = """
 • No response needed
-• Ensure the user is notified  
+• Ensure the user is notified
 """
 
 examples_triage = [
-  {
-      "inputs": {"email_input": email_input_1},
-      "outputs": {"classification": triage_output_1},
-  },
-  {
-      "inputs": {"email_input": email_input_2},
-      "outputs": {"classification": triage_output_2},
-  },
-  {
-      "inputs": {"email_input": email_input_3},
-      "outputs": {"classification": triage_output_3},
-  },
-  {
-      "inputs": {"email_input": email_input_4},
-      "outputs": {"classification": triage_output_4},
-  },
-  {
-      "inputs": {"email_input": email_input_5},
-      "outputs": {"classification": triage_output_5},
-  },
-  {
-      "inputs": {"email_input": email_input_6},
-      "outputs": {"classification": triage_output_6},
-  },
-  {
-      "inputs": {"email_input": email_input_7},
-      "outputs": {"classification": triage_output_7},
-  },
-  {
-      "inputs": {"email_input": email_input_8},
-      "outputs": {"classification": triage_output_8},
-  },
-  {
-      "inputs": {"email_input": email_input_9},
-      "outputs": {"classification": triage_output_9},
-  },
-  {
-      "inputs": {"email_input": email_input_10},
-      "outputs": {"classification": triage_output_10},
-  },
-  {
-      "inputs": {"email_input": email_input_11},
-      "outputs": {"classification": triage_output_11},
-  },
-  {
-      "inputs": {"email_input": email_input_12},
-      "outputs": {"classification": triage_output_12},
-  },
-  {
-      "inputs": {"email_input": email_input_13},
-      "outputs": {"classification": triage_output_13},
-  },
-  {
-      "inputs": {"email_input": email_input_14},
-      "outputs": {"classification": triage_output_14},
-  },
-  {
-      "inputs": {"email_input": email_input_15},
-      "outputs": {"classification": triage_output_15},
-  },
-  {
-      "inputs": {"email_input": email_input_16},
-      "outputs": {"classification": triage_output_16},
-  },
+    {
+        "inputs": {"email_input": email_input_1},
+        "outputs": {"classification": triage_output_1},
+    },
+    {
+        "inputs": {"email_input": email_input_2},
+        "outputs": {"classification": triage_output_2},
+    },
+    {
+        "inputs": {"email_input": email_input_3},
+        "outputs": {"classification": triage_output_3},
+    },
+    {
+        "inputs": {"email_input": email_input_4},
+        "outputs": {"classification": triage_output_4},
+    },
+    {
+        "inputs": {"email_input": email_input_5},
+        "outputs": {"classification": triage_output_5},
+    },
+    {
+        "inputs": {"email_input": email_input_6},
+        "outputs": {"classification": triage_output_6},
+    },
+    {
+        "inputs": {"email_input": email_input_7},
+        "outputs": {"classification": triage_output_7},
+    },
+    {
+        "inputs": {"email_input": email_input_8},
+        "outputs": {"classification": triage_output_8},
+    },
+    {
+        "inputs": {"email_input": email_input_9},
+        "outputs": {"classification": triage_output_9},
+    },
+    {
+        "inputs": {"email_input": email_input_10},
+        "outputs": {"classification": triage_output_10},
+    },
+    {
+        "inputs": {"email_input": email_input_11},
+        "outputs": {"classification": triage_output_11},
+    },
+    {
+        "inputs": {"email_input": email_input_12},
+        "outputs": {"classification": triage_output_12},
+    },
+    {
+        "inputs": {"email_input": email_input_13},
+        "outputs": {"classification": triage_output_13},
+    },
+    {
+        "inputs": {"email_input": email_input_14},
+        "outputs": {"classification": triage_output_14},
+    },
+    {
+        "inputs": {"email_input": email_input_15},
+        "outputs": {"classification": triage_output_15},
+    },
+    {
+        "inputs": {"email_input": email_input_16},
+        "outputs": {"classification": triage_output_16},
+    },
 ]
 
 email_inputs = [
-        email_input_1, email_input_2, email_input_3, email_input_4, email_input_5,
-        email_input_6, email_input_7, email_input_8, email_input_9, email_input_10,
-        email_input_11, email_input_12, email_input_13, email_input_14, email_input_15,
-        email_input_16
-    ]
+    email_input_1,
+    email_input_2,
+    email_input_3,
+    email_input_4,
+    email_input_5,
+    email_input_6,
+    email_input_7,
+    email_input_8,
+    email_input_9,
+    email_input_10,
+    email_input_11,
+    email_input_12,
+    email_input_13,
+    email_input_14,
+    email_input_15,
+    email_input_16,
+]
 
 email_names = [
-    "email_input_1", "email_input_2", "email_input_3", "email_input_4", "email_input_5",
-    "email_input_6", "email_input_7", "email_input_8", "email_input_9", "email_input_10",
-    "email_input_11", "email_input_12", "email_input_13", "email_input_14", "email_input_15",
-    "email_input_16"
+    "email_input_1",
+    "email_input_2",
+    "email_input_3",
+    "email_input_4",
+    "email_input_5",
+    "email_input_6",
+    "email_input_7",
+    "email_input_8",
+    "email_input_9",
+    "email_input_10",
+    "email_input_11",
+    "email_input_12",
+    "email_input_13",
+    "email_input_14",
+    "email_input_15",
+    "email_input_16",
 ]
 
 response_criteria_list = [
-    response_criteria_1, response_criteria_2, response_criteria_3, response_criteria_4, response_criteria_5,
-    response_criteria_6, response_criteria_7, response_criteria_8, response_criteria_9, response_criteria_10,
-    response_criteria_11, response_criteria_12, response_criteria_13, response_criteria_14, response_criteria_15,
-    response_criteria_16
+    response_criteria_1,
+    response_criteria_2,
+    response_criteria_3,
+    response_criteria_4,
+    response_criteria_5,
+    response_criteria_6,
+    response_criteria_7,
+    response_criteria_8,
+    response_criteria_9,
+    response_criteria_10,
+    response_criteria_11,
+    response_criteria_12,
+    response_criteria_13,
+    response_criteria_14,
+    response_criteria_15,
+    response_criteria_16,
 ]
 
 triage_outputs_list = [
-    triage_output_1, triage_output_2, triage_output_3, triage_output_4, triage_output_5,
-    triage_output_6, triage_output_7, triage_output_8, triage_output_9, triage_output_10,
-    triage_output_11, triage_output_12, triage_output_13, triage_output_14, triage_output_15,
-    triage_output_16
+    triage_output_1,
+    triage_output_2,
+    triage_output_3,
+    triage_output_4,
+    triage_output_5,
+    triage_output_6,
+    triage_output_7,
+    triage_output_8,
+    triage_output_9,
+    triage_output_10,
+    triage_output_11,
+    triage_output_12,
+    triage_output_13,
+    triage_output_14,
+    triage_output_15,
+    triage_output_16,
 ]
 
 # Define expected tool calls for each email response based on content analysis
 # Options: write_email, schedule_meeting, check_calendar_availability, done
 expected_tool_calls = [
-    ["write_email", "done"],                                                 # email_input_1: API documentation question
-    [],                                                                      # email_input_2: Newsletter notification - ignore
-    [],                                                                      # email_input_3: System maintenance notification - notification only
-    ["check_calendar_availability", "schedule_meeting", "write_email", "done"], # email_input_4: Tax call scheduling
-    [],                                                                      # email_input_5: Expense report reminder - notification only
-    ["write_email", "done"],                                                 # email_input_6: Conference invitation - needs response
-    ["write_email", "done"],                                                 # email_input_7: Document review request
-    ["write_email", "done"],                                                 # email_input_8: Swimming class registration
-    [],                                                                      # email_input_9: GitHub PR comment - notification only
-    ["check_calendar_availability", "write_email", "done"], # email_input_10: Planning meeting
-    [],                                                                      # email_input_11: AWS alert - notification only
-    [],                                                                      # email_input_12: Subscription renewal - ignore
-    ["write_email", "done"],                                                 # email_input_13: Doctor appointment reminder
-    [],                                                                      # email_input_14: Social media notification - no action needed
-    ["check_calendar_availability", "schedule_meeting", "write_email", "done"], # email_input_15: Joint presentation
-    [],                                                                      # email_input_16: Newsletter - notification only
+    ["write_email", "done"],  # email_input_1: API documentation question
+    [],  # email_input_2: Newsletter notification - ignore
+    [],  # email_input_3: System maintenance notification - notification only
+    [
+        "check_calendar_availability",
+        "schedule_meeting",
+        "write_email",
+        "done",
+    ],  # email_input_4: Tax call scheduling
+    [],  # email_input_5: Expense report reminder - notification only
+    ["write_email", "done"],  # email_input_6: Conference invitation - needs response
+    ["write_email", "done"],  # email_input_7: Document review request
+    ["write_email", "done"],  # email_input_8: Swimming class registration
+    [],  # email_input_9: GitHub PR comment - notification only
+    [
+        "check_calendar_availability",
+        "write_email",
+        "done",
+    ],  # email_input_10: Planning meeting
+    [],  # email_input_11: AWS alert - notification only
+    [],  # email_input_12: Subscription renewal - ignore
+    ["write_email", "done"],  # email_input_13: Doctor appointment reminder
+    [],  # email_input_14: Social media notification - no action needed
+    [
+        "check_calendar_availability",
+        "schedule_meeting",
+        "write_email",
+        "done",
+    ],  # email_input_15: Joint presentation
+    [],  # email_input_16: Newsletter - notification only
 ]
+
+test_array = list(zip(email_inputs, expected_tool_calls))
